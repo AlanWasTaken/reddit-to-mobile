@@ -1,0 +1,271 @@
+@font-face {
+	font-family: "icons-0.9817300802096725";
+	src: url('../fonts/icons-0.9817300802096725.eot');
+	src: url('../fonts/icons-0.9817300802096725.eot?#iefix') format('eot'),
+		url('../fonts/icons-0.9817300802096725.woff') format('woff'),
+		url('../fonts/icons-0.9817300802096725.ttf') format('truetype'),
+		url('../fonts/icons-0.9817300802096725.svg#icons-0.9817300802096725') format('svg');
+}
+
+.icon-base-pseudo {
+	font-family: "icons-0.9817300802096725";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+.icon-char(@filename) {
+	@caron-circled: "\e001";
+	@caron: "\e002";
+	@check-circled: "\e003";
+	@check: "\e004";
+	@comments-circled: "\e005";
+	@comments: "\e006";
+	@crown-circled: "\e007";
+	@crown: "\e008";
+	@downvote-circled: "\e009";
+	@downvote: "\e00a";
+	@flag-circled: "\e00b";
+	@flag: "\e00c";
+	@gold-circled: "\e00d";
+	@gold: "\e00e";
+	@hamburger-circled: "\e00f";
+	@hamburger: "\e010";
+	@info-circled: "\e011";
+	@info: "\e012";
+	@karma-circled: "\e013";
+	@karma: "\e014";
+	@law-circled: "\e015";
+	@law: "\e016";
+	@link-circled: "\e017";
+	@link: "\e018";
+	@logo: "\e019";
+	@mail-circled: "\e01a";
+	@mail: "\e01b";
+	@nsfw-circled: "\e01c";
+	@nsfw: "\e01d";
+	@play-circled: "\e01e";
+	@play: "\e01f";
+	@post-circled: "\e020";
+	@post: "\e021";
+	@r-circled: "\e022";
+	@r: "\e023";
+	@reply-circled: "\e024";
+	@reply: "\e025";
+	@save-circled: "\e026";
+	@save: "\e027";
+	@search-circled: "\e028";
+	@search: "\e029";
+	@seashells-circled: "\e02a";
+	@seashells: "\e02b";
+	@settings-circled: "\e02c";
+	@settings: "\e02d";
+	@share-circled: "\e02e";
+	@share: "\e02f";
+	@snoo-circled: "\e030";
+	@snoo: "\e031";
+	@text-circled: "\e032";
+	@text: "\e033";
+	@twirly-circled: "\e034";
+	@twirly: "\e035";
+	@unsave-circled: "\e036";
+	@unsave: "\e037";
+	@upvote-circled: "\e038";
+	@upvote: "\e039";
+	@x-circled: "\e03a";
+	@x: "\e03b";
+	
+	content: @@filename;
+}
+
+.icon(@filename, @insert: before) {
+	@pseudo-selector: ~":@{insert}";
+
+	&@{pseudo-selector} {
+		&:extend(.icon-base-pseudo);
+		.icon-char(@filename);
+	}
+}
+
+.icon-caron-circled {
+	.icon(caron-circled);
+}
+.icon-caron {
+	.icon(caron);
+}
+.icon-check-circled {
+	.icon(check-circled);
+}
+.icon-check {
+	.icon(check);
+}
+.icon-comments-circled {
+	.icon(comments-circled);
+}
+.icon-comments {
+	.icon(comments);
+}
+.icon-crown-circled {
+	.icon(crown-circled);
+}
+.icon-crown {
+	.icon(crown);
+}
+.icon-downvote-circled {
+	.icon(downvote-circled);
+}
+.icon-downvote {
+	.icon(downvote);
+}
+.icon-flag-circled {
+	.icon(flag-circled);
+}
+.icon-flag {
+	.icon(flag);
+}
+.icon-gold-circled {
+	.icon(gold-circled);
+}
+.icon-gold {
+	.icon(gold);
+}
+.icon-hamburger-circled {
+	.icon(hamburger-circled);
+}
+.icon-hamburger {
+	.icon(hamburger);
+}
+.icon-info-circled {
+	.icon(info-circled);
+}
+.icon-info {
+	.icon(info);
+}
+.icon-karma-circled {
+	.icon(karma-circled);
+}
+.icon-karma {
+	.icon(karma);
+}
+.icon-law-circled {
+	.icon(law-circled);
+}
+.icon-law {
+	.icon(law);
+}
+.icon-link-circled {
+	.icon(link-circled);
+}
+.icon-link {
+	.icon(link);
+}
+.icon-logo {
+	.icon(logo);
+}
+.icon-mail-circled {
+	.icon(mail-circled);
+}
+.icon-mail {
+	.icon(mail);
+}
+.icon-nsfw-circled {
+	.icon(nsfw-circled);
+}
+.icon-nsfw {
+	.icon(nsfw);
+}
+.icon-play-circled {
+	.icon(play-circled);
+}
+.icon-play {
+	.icon(play);
+}
+.icon-post-circled {
+	.icon(post-circled);
+}
+.icon-post {
+	.icon(post);
+}
+.icon-r-circled {
+	.icon(r-circled);
+}
+.icon-r {
+	.icon(r);
+}
+.icon-reply-circled {
+	.icon(reply-circled);
+}
+.icon-reply {
+	.icon(reply);
+}
+.icon-save-circled {
+	.icon(save-circled);
+}
+.icon-save {
+	.icon(save);
+}
+.icon-search-circled {
+	.icon(search-circled);
+}
+.icon-search {
+	.icon(search);
+}
+.icon-seashells-circled {
+	.icon(seashells-circled);
+}
+.icon-seashells {
+	.icon(seashells);
+}
+.icon-settings-circled {
+	.icon(settings-circled);
+}
+.icon-settings {
+	.icon(settings);
+}
+.icon-share-circled {
+	.icon(share-circled);
+}
+.icon-share {
+	.icon(share);
+}
+.icon-snoo-circled {
+	.icon(snoo-circled);
+}
+.icon-snoo {
+	.icon(snoo);
+}
+.icon-text-circled {
+	.icon(text-circled);
+}
+.icon-text {
+	.icon(text);
+}
+.icon-twirly-circled {
+	.icon(twirly-circled);
+}
+.icon-twirly {
+	.icon(twirly);
+}
+.icon-unsave-circled {
+	.icon(unsave-circled);
+}
+.icon-unsave {
+	.icon(unsave);
+}
+.icon-upvote-circled {
+	.icon(upvote-circled);
+}
+.icon-upvote {
+	.icon(upvote);
+}
+.icon-x-circled {
+	.icon(x-circled);
+}
+.icon-x {
+	.icon(x);
+}

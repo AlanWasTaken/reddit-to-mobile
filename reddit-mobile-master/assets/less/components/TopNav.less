@@ -1,0 +1,171 @@
+.TopNav {
+  height: @top-nav-height;
+  background-color: @body-bg;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  -webkit-user-select: none;
+  top: 0;
+
+  .Dropdown {
+    float: left !important;
+
+    .SeashellsDropdown-button {
+      padding-top: 12px;
+    }
+
+    &.pull-right .Dropdown-tab {
+      right: 1px;
+    }
+  }
+
+  &:after {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: @white;
+    .shadow;
+    z-index: -1;
+    left: 0;
+    .tween;
+  }
+
+  &.opened:after {
+    width: calc(100% ~'-' @top-nav-height);
+  }
+
+  [class^="icon-"] {
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    line-height: inherit;
+  }
+}
+
+  .TopNav-left, .TopNav-right {
+    position: relative;
+  }
+
+  .TopNav-snoo {
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+
+    .SnooIcon {
+      @size: 30px;
+      width: @size;
+      height: @size;
+      margin-top: 7px;
+      color: @orangered;
+      line-height: @size;
+      font-size: @size;
+
+      .SVG-fill {
+        fill: @orangered !important;
+      }
+
+        .mouth {
+        stroke: @black !important;
+      }
+    }
+  }
+
+  .TopNav-left .Logo {
+    line-height: @top-nav-height;
+  }
+
+  .TopNav-padding, .TopNav-floaty, .TopNav .Dropdown {
+    padding: 0 6px;
+  }
+
+  .TopNav-right {
+    .TopNav-padding, .TopNav-floaty, .TopNav .Dropdown {
+      margin-left: 8px;
+    }
+
+    .SVG-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    @size: 30px;
+    .icon-font({
+      height: @size;
+      width: @size;
+      font-size: @size;
+      line-height: @top-nav-height;
+      line-height: @top-nav-height;
+    });
+
+    .icon-hamburger, .icon-x {
+      line-height: @size;
+    }
+  }
+
+  .TopNav-hamburger {
+    margin-left: 0px;
+  }
+
+  .TopNav-floaty {
+    display: block;
+    float: left;
+    height: 100%;
+  }
+
+  .TopNav-text {
+    font-size: @font-size-base + 7px;
+    color: @black;
+    margin: 0;
+    line-height: 46px;
+    display: inline-block;
+  }
+
+    .TopNav-a, .TopNav-a:hover, .TopNav-a:visited {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+      height: 100%;
+    }
+
+    .TopNav-a:active {
+      color: lighten(@text-color, 20%);
+    }
+
+  .TopNav-post {
+    padding-right: 11px;
+  }
+
+  .TopNav-search {
+    padding-left: 1px;
+
+    svg {
+      margin-top: 11px;
+    }
+  }
+
+  .TopNav-beta {
+    pointer-events: none;
+    position: absolute;
+    width: 60px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.66);
+    color: @white;
+    font-size: 9px;
+    text-transform: uppercase;
+    .rotate(-45deg);
+    padding-top: 2px;
+    line-height: 12px;
+    top: 5px;
+    left: -17px;
+  }
+
+.TopNav-headline {
+  height: 100%;
+
+  svg {
+    position: relative;
+    top: 50%;
+    margin-top: -12px;
+  }
+}
